@@ -1,0 +1,4 @@
+include README.md
+recursive-include octoprint_heatled/templates *
+recursive-include octoprint_heatled/translations *
+recursive-include octoprint_heatled/static *

@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+OctoPrint_Heatled.egg-info/PKG-INFO
+OctoPrint_Heatled.egg-info/SOURCES.txt
+OctoPrint_Heatled.egg-info/dependency_links.txt
+OctoPrint_Heatled.egg-info/entry_points.txt
+OctoPrint_Heatled.egg-info/not-zip-safe
+OctoPrint_Heatled.egg-info/requires.txt
+OctoPrint_Heatled.egg-info/top_level.txt
+octoprint_heatled/__init__.py
+octoprint_heatled/static/css/heatled.css
+octoprint_heatled/static/js/heatled.js
+octoprint_heatled/static/less/heatled.less
+octoprint_heatled/templates/README.txt
