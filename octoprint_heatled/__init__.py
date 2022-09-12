@@ -76,6 +76,9 @@ class HeatledPlugin(octoprint.plugin.SettingsPlugin,
     def on_after_startup(self):
         if (GPIO.getmode() is None):
             GPIO.setmode(GPIO.BOARD)
+        if (GPIO.getmode() == GPIO.BCM):
+            self._logger.error("Another plugin has set the GPIO mode to BCM which is incompatible with heatled plugin")
+            
         self.reset_gpio()
         
 
