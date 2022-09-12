@@ -21,8 +21,8 @@ class HeatledPlugin(octoprint.plugin.SettingsPlugin,
 
     def reset_gpio(self):
         self._logger.debug("Refreshing GPIO Settings")
-        GPIO.setup(self._settings.get(["bedgpio"]), GPIO.OUT)
-        GPIO.setup(self._settings.get(["hotendgpio"]), GPIO.OUT)
+        GPIO.setup(int(self._settings.get(["bedgpio"])), GPIO.OUT)
+        GPIO.setup(int(self._settings.get(["hotendgpio"])), GPIO.OUT)
 
 
     ##~~ SettingsPlugin mixin
