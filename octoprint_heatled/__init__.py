@@ -108,17 +108,17 @@ class HeatledPlugin(octoprint.plugin.SettingsPlugin,
         if cmd_id == 'M140':
             if temp > 0:
                 self._logger.info(" -- Bed LED ON: %s", self._settings.get(["bedgpio"]))
-                GPIO.output(self._settings.get(["bedgpio"]), GPIO.HIGH)
+                GPIO.output(int(self._settings.get(["bedgpio"])), GPIO.HIGH)
             else:
                 self._logger.info(" -- Bed LED OFF: %s", self._settings.get(["bedgpio"]))
-                GPIO.output(self._settings.get(["bedgpio"]), GPIO.LOW)
+                GPIO.output(int(self._settings.get(["bedgpio"])), GPIO.LOW)
         elif cmd_id == 'M104':
             if temp > 0:
                 self._logger.info(" -- HotEnd LED ON: %s", self._settings.get(["hotendgpio"]))
-                GPIO.output(self._settings.get(["hotendgpio"]), GPIO.HIGH)
+                GPIO.output(int(self._settings.get(["hotendgpio"])), GPIO.HIGH)
             else:
                 self._logger.info(" -- HotEnd LED OFF: %s", self._settings.get(["hotendgpio"]))
-                GPIO.output(self._settings.get(["hotendgpio"]), GPIO.LOW)
+                GPIO.output(int(self._settings.get(["hotendgpio"])), GPIO.LOW)
        
         status = 'ok'
 
