@@ -74,7 +74,8 @@ class HeatledPlugin(octoprint.plugin.SettingsPlugin,
 
     
     def on_after_startup(self):
-        GPIO.setmode(GPIO.BCM)
+        if (GPIO.getmode() is None):
+            GPIO.setmode(GPIO.BOARD)
         self.reset_gpio()
         
 
