@@ -11,7 +11,7 @@ from __future__ import absolute_import
 
 import octoprint.plugin
 import re
-#import RPi.GPIO as GPIO
+import RPi.GPIO as GPIO
 
 class HeatledPlugin(octoprint.plugin.SettingsPlugin,
     octoprint.plugin.AssetPlugin,
@@ -21,8 +21,8 @@ class HeatledPlugin(octoprint.plugin.SettingsPlugin,
 
     def reset_gpio(self):
         self._logger.debug("Refreshing GPIO Settings")
-        #GPIO.setup(self._settings.get(["bedgpio"]), GPIO.OUT)
-        #GPIO.setup(self._settings.get(["hotendgpio"]), GPIO.OUT)
+        GPIO.setup(self._settings.get(["bedgpio"]), GPIO.OUT)
+        GPIO.setup(self._settings.get(["hotendgpio"]), GPIO.OUT)
 
 
     ##~~ SettingsPlugin mixin
@@ -74,7 +74,7 @@ class HeatledPlugin(octoprint.plugin.SettingsPlugin,
 
     
     def on_after_startup(self):
-        #GPIO.setmode(GPIO.BCM)
+        GPIO.setmode(GPIO.BCM)
         self.reset_gpio()
         
 
