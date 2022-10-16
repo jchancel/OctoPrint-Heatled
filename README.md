@@ -1,10 +1,10 @@
 # OctoPrint-Heatled
 
-**TODO:** Describe what your plugin does.
+Very simple octoprint plugin that turns on a specified GPIO pin when the heatbed or hotend is turned on.   
 
 ## Setup
 
-Install manually:
+Install manually by copying the following url into the octoprint plugin manual addition:
 
     https://github.com/jchancel/OctoPrint-Heatled/archive/master.zip
 
@@ -14,4 +14,5 @@ Install manually:
 
 ## Configuration
 
-**TODO:** Describe your plugin's configuration options (if any).
+Enter the Board ID (this is different from the GPIO name) for the pin you wish to enable or disable when hot end or bed is turned on or off.
+![image](https://user-images.githubusercontent.com/13112698/196039416-2c29ba73-9ea8-4cb0-bb90-b2f0c467dcad.png)
