@@ -4,7 +4,7 @@ Very simple octoprint plugin that turns on a specified GPIO pin when the heatbed
 
 ## Setup
 
-Install manually by copying the following url into the octoprint plugin manual addition:
+Install manually by copying the following url into the octoprint install new plugins "from URL" input box:
 
     https://github.com/jchancel/OctoPrint-Heatled/archive/master.zip
 
